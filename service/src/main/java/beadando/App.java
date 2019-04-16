@@ -1,4 +1,4 @@
-package beadando.service.modell;
+package beadando;
 
 /**
  * Hello world!

@@ -1,4 +1,4 @@
-package beadando.service.controller;
+package beadando.controller;
 
 import static org.junit.Assert.assertTrue;
 

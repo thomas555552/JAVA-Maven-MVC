@@ -1,4 +1,4 @@
-package beadando.service;
+package beadando;
 
 import static org.junit.Assert.assertTrue;
 
