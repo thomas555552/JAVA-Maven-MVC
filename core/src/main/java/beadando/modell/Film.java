@@ -1,24 +1,24 @@
 package beadando.modell;
 
 public class Film {
-    private String name;
+    private String title;
     private String director;
     private int year;
     private int length;
 
-    public Film(String name, String director, int year, int length) {
-        this.name = name;
+    public Film(String title, String director, int year, int length) {
+        this.title = title;
         this.director = director;
         this.year = year;
         this.length = length;
     }
 
     public String getName() {
-        return name;
+        return title;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setName(String title) {
+        this.title = title;
     }
 
     public String getDirector() {

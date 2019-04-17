@@ -1,0 +1,17 @@
+package beadando.service;
+
+import beadando.modell.Projection;
+
+import java.util.List;
+
+public interface ProjectionServiceInterface {
+
+    Projection addProjection(Projection projection);
+    void deleteProjectionByID(int id);
+
+    List<Projection> getAllProjection();
+
+    Projection getProjectionByID(int id);
+
+
+}
