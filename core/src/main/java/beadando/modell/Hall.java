@@ -13,6 +13,16 @@ public class Hall {
         this.name = name;
         this.seatperrows = seatperrows;
         this.rowsnumber = rowsnumber;
+
+        //TODO exeption esetleg seatperrows nem lehet nagyobb mint 99
+        for(int i=1;i<=rowsnumber;i++){
+            for(int j=1;j<=seatperrows;j++){
+                int temp=(i*100)+j;
+                seats.put(temp,null);
+            }
+        }
+
+
     }
 
     public void setSeats(SortedMap<Integer, User> seats) {
