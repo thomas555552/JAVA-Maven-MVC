@@ -1,4 +1,4 @@
-package beadando.controller;
+package beadando;
 
 /**
  * Hello world!
