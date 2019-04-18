@@ -13,7 +13,7 @@ public interface HallServiceInterface {
     void addHall(Hall hall);
 
     int[] getFreeSeats(Hall hall);
-    void setUserToOneSeat(Hall hall,Integer seatNumber,User user);
+    void setUserToOneSeat(Hall hall,int seatNumber,User user);
     void setUserToMoreSeat(Hall hall,String seatNumbers,User user);
 
 }

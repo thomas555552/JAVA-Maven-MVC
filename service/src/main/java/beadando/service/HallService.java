@@ -65,7 +65,7 @@ public class HallService implements HallServiceInterface {
     }
 
     @Override
-    public void setUserToOneSeat(Hall hall, Integer seatNumber, User user) {
+    public void setUserToOneSeat(Hall hall, int seatNumber, User user) {
         int temp=halls.indexOf(hall);
         halls.get(temp).getSeats().put(seatNumber, user);
   }
