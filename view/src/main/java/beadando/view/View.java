@@ -42,6 +42,8 @@ public class View {
         Ucontroller.add(new User("User1", "Valami utca 2", 20));
         Ucontroller.add(new User("User2", "Kis utca 4", 50));
 
+        // TODO HALLT átcsinálni,így lehet változni fog a projection is megnézni mihez kell még esetleg valami
+        // TODO HALL ban még hozzáadni egy ID-t mert igy egy terem több filmhez kapcsolva gond lehet
         Hcontroller.addHall(new Hall("Nagy terem", 5, 3));
 
         Pcontroller.addProjection(new Projection(1,"2019.05.20, 18:00", Fcontroller.getFilmByTitle("TestTitle2"), Hcontroller.getHallbyName("Nagy terem")));
