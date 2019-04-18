@@ -3,41 +3,89 @@ package beadando.service;
 import beadando.modell.Hall;
 import beadando.modell.User;
 
-import java.util.List;
+import java.util.*;
+
 
 public class HallService implements HallServiceInterface {
+
+    List<Hall> halls = new ArrayList<Hall>();
+
     @Override
     public List<Hall> getAllHall() {
-        return null;
+        return halls;
     }
 
     @Override
     public Hall getHallbyName(String name) {
+        Iterator<Hall> iterator = halls.iterator();
+        while (iterator.hasNext()){
+            Hall hall = iterator.next();
+            if (hall.getName().equals(name)) return hall;
+        }
         return null;
     }
 
     @Override
     public void deleteHallByName(String name) {
-
+        Iterator<Hall> iterator = halls.iterator();
+        while (iterator.hasNext()){
+            Hall hall = iterator.next();
+            if(hall.getName().equals(name)) halls.remove(hall);
+        }
     }
 
     @Override
-    public Hall addHall(Hall hall) {
+    public void addHall(Hall hall) {
+        halls.add(hall);
+    }
+
+    @Override
+    public int[] getFreeSeats(Hall hall) {
+
+        Iterator<Hall> iterator = halls.iterator();
+        while (iterator.hasNext()){
+            Hall hallTemp = iterator.next();
+            if (hallTemp.equals(hall)){
+                int temp2 = 0;
+                int[] IntArray= new int[hallTemp.getSeatperrows()*hallTemp.getRowsnumber()];
+                for(int i=1;i<=hallTemp.getRowsnumber();i++){
+                    for(int j=1;j<=hallTemp.getSeatperrows();j++){
+                        int temp=(i*100)+j;
+                        if(hallTemp.getSeats().get(temp)==null){
+                            IntArray[temp2]=temp;
+                            temp2++;
+                        }
+
+                    }
+                }
+                return IntArray;
+            }
+        }
         return null;
     }
 
     @Override
-    public Integer getFreeSeats(Hall hall) {
-        return null;
-    }
+    public void setUserToOneSeat(Hall hall, Integer seatNumber, User user) {
+        int temp=halls.indexOf(hall);
+        halls.get(temp).getSeats().put(seatNumber, user);
+  }
 
     @Override
-    public void setUserToOneSeat(Integer seatNumber, User user) {
+    public void setUserToMoreSeat(Hall hall, String seatNumbers, User user) {
+            String[] separateSeats = seatNumbers.split(",");
+            int[] intSeats= new int[separateSeats.length];
+            int temp=0;
+            for(String seat: separateSeats){
+               intSeats[temp]=Integer.parseInt(seat);
+               temp++;
+            }
+
+            int hallindextemp=halls.indexOf(hall);
+            for (int seat: intSeats){
+                halls.get(hallindextemp).getSeats().put(seat,user);
+            }
+
 
     }
 
-    @Override
-    public void setUserToMoreSeat(String seatNumbers, User user) {
-
-    }
 }

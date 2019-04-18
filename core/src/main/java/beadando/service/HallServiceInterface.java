@@ -10,10 +10,10 @@ public interface HallServiceInterface {
     List<Hall> getAllHall();
     Hall getHallbyName(String name);
     void deleteHallByName(String name);
-    Hall addHall(Hall hall);
+    void addHall(Hall hall);
 
-    Integer getFreeSeats(Hall hall);
-    void setUserToOneSeat(Integer seatNumber,User user);
-    void setUserToMoreSeat(String seatNumbers,User user);
+    int[] getFreeSeats(Hall hall);
+    void setUserToOneSeat(Hall hall,Integer seatNumber,User user);
+    void setUserToMoreSeat(Hall hall,String seatNumbers,User user);
 
 }
