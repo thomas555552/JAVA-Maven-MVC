@@ -9,6 +9,7 @@
         <module name="controller" />
         <module name="core" />
         <module name="service" />
+        <module name="view" />
       </profile>
     </annotationProcessing>
   </component>

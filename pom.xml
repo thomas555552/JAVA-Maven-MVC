@@ -15,7 +15,8 @@
     <module>controller</module>
     <module>core</module>
     <module>service</module>
-  </modules>
+      <module>view</module>
+    </modules>
 
 
 
