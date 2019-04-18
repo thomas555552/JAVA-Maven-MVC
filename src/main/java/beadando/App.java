@@ -1,16 +1,12 @@
 package beadando;
 
-import beadando.controller.FilmController;
-import beadando.service.FilmService;
 
 public class App {
 
     public static void main( String[] args )
     {
 
-        FilmController filmController = new FilmController(new FilmService());
 
-        System.out.println("ASD");
 /*
         FilmController filmController = new FilmController(new FilmService());
         UserController userController = new UserController(new UserService());

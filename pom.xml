@@ -8,13 +8,26 @@
   <artifactId>javabeadando</artifactId>
   <packaging>pom</packaging>
   <version>1.0-SNAPSHOT</version>
- <modules>
+
+    <name>javabeadando</name>
+
+    <modules>
     <module>controller</module>
     <module>core</module>
     <module>service</module>
   </modules>
 
-  <name>javabeadando</name>
+
+
+    <dependencies>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>4.11</version>
+                <scope>test</scope>
+            </dependency>
+    </dependencies>
+
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
@@ -24,26 +37,9 @@
     <maven.compiler.target>1.7</maven.compiler.target>
   </properties>
 
-  <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.11</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>beadando</groupId>
-      <artifactId>service</artifactId>
-      <version>1.0-SNAPSHOT</version>
-    </dependency>
-    <dependency>
-      <groupId>beadando</groupId>
-      <artifactId>controller</artifactId>
-      <version>1.0-SNAPSHOT</version>
-      <scope>compile</scope>
-    </dependency>
 
-  </dependencies>
+
+
 
   <build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
