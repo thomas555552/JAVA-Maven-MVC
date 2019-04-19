@@ -41,6 +41,8 @@ public class HallService implements HallServiceInterface {
         halls.add(hall);
     }
 
+
+    //TODO JAVITANI
     @Override
     public int[] getFreeSeats(Hall hall) {
 
@@ -66,12 +68,14 @@ public class HallService implements HallServiceInterface {
         return null;
     }
 
+    //TODO JAVITANI
     @Override
     public void setUserToOneSeat(Hall hall, int seatNumber, User user) {
         int temp=halls.indexOf(hall);
 
   }
 
+  //TODO JAVITANI
     @Override
     public void setUserToMoreSeat(Hall hall, String seatNumbers, User user) {
             String[] separateSeats = seatNumbers.split(",");

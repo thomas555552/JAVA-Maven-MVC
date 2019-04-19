@@ -1,10 +1,14 @@
 package beadando.modell;
 
 import java.util.List;
-import java.util.SortedMap;
+
 
 public class Hall {
 
+
+    //TODO ID-t meg hozzaadni es javitani az egeszet az szerint
+    //TODO ha lesz ID akkor ha uj vetitest csinalunk es adunk hozza hallt, akkor uj hall kell, vagyis
+    //TODO annak a masolata amit megadtak,de uj ID-val, hogy a seatek uresek legyenek...
     private String name;
     private int seatperrows;
     private int rowsnumber;
@@ -16,7 +20,7 @@ public class Hall {
         this.seatperrows = seatperrows;
         this.rowsnumber = rowsnumber;
 
-        //TODO exeption esetleg seatperrows nem lehet nagyobb mint 99
+        //TODO exeption esetleg seatperrows nem lehet nagyobb mint 99 ++JAVITANI
         for(int i=1;i<=rowsnumber;i++){
             for(int j=1;j<=seatperrows;j++){
                 int temp=(i*100)+j;

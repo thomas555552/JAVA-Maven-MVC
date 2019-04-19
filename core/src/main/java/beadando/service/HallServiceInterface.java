@@ -11,13 +11,6 @@ public interface HallServiceInterface {
     Hall getHallbyName(String name);
     void deleteHallByName(String name);
 
-    /*
-    private String name;
-    private int seatperrows;
-    private int rowsnumber;
-    // private SortedMap<Integer, User> seats;
-    private List<Seat> seats;
-     */
 
     void addHall(String name, int seatperrows, int rowsnumber);
 
