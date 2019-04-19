@@ -1,5 +1,6 @@
 package beadando.modell;
 
+import java.util.List;
 import java.util.SortedMap;
 
 public class Hall {
@@ -7,7 +8,8 @@ public class Hall {
     private String name;
     private int seatperrows;
     private int rowsnumber;
-    private SortedMap<Integer, User> seats;
+    /*private SortedMap<Integer, User> seats;*/
+    private List<Seat> seats;
 
     public Hall(String name, int seatperrows, int rowsnumber) {
         this.name = name;
@@ -18,19 +20,19 @@ public class Hall {
         for(int i=1;i<=rowsnumber;i++){
             for(int j=1;j<=seatperrows;j++){
                 int temp=(i*100)+j;
-                seats.put(temp,null);
+
             }
         }
 
 
     }
 
-    public void setSeats(SortedMap<Integer, User> seats) {
-        this.seats = seats;
+    public List<Seat> getSeats() {
+        return seats;
     }
 
-    public SortedMap<Integer, User> getSeats() {
-        return seats;
+    public void setSeats(List<Seat> seats) {
+        this.seats = seats;
     }
 
     public String getName() {

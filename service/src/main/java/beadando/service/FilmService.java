@@ -22,8 +22,12 @@ public class FilmService implements FilmServiceInterface {
         return null;
     }
 
+
+
+
     @Override
-    public void addFilm(Film film) {
+    public void addFilm(String title, String director, int year, int length) {
+        Film film = new Film(title, director, year, length);
         films.add(film);
     }
 

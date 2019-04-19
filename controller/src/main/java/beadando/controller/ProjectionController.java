@@ -1,5 +1,7 @@
 package beadando.controller;
 
+import beadando.modell.Film;
+import beadando.modell.Hall;
 import beadando.modell.Projection;
 import beadando.service.ProjectionServiceInterface;
 
@@ -13,9 +15,9 @@ public class ProjectionController {
         this.projectionServiceInterface=projectionServiceInterface;
     }
 
-
-    public void addProjection(Projection projection){
-        projectionServiceInterface.addProjection(projection);
+   
+    public void addProjection(int ID, String date, Film film, Hall hall){
+        projectionServiceInterface.addProjection(ID, date, film, hall);
     }
 
     public void deleteProjectionByID(int id){

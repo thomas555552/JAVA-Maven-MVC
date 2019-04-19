@@ -9,7 +9,9 @@ public interface FilmServiceInterface {
 
     Film getFilmByTitle(String title);
 
-    void addFilm(Film film);
+
+
+    void addFilm(String title, String director, int year, int length);
 
     void deleteFilmByTitle(String title);
 

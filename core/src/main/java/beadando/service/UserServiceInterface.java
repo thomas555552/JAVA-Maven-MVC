@@ -9,7 +9,7 @@ public interface UserServiceInterface {
 
     User findByUsername (String username);
 
-    void add(User user);
+    void add(String name,String address, int age);
 
 
 }

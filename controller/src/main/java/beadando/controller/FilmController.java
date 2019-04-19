@@ -21,8 +21,9 @@ public class FilmController {
         return filmServiceInterface.getFilmByTitle(title);
     }
 
-    public void addFilm(Film film){
-        filmServiceInterface.addFilm(film);
+
+    public void addFilm(String title, String director, int year, int length){
+        filmServiceInterface.addFilm(title, director,year,length);
     }
 
     public void deleteFilmByTitle(String title){

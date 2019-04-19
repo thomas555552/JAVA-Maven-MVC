@@ -27,8 +27,10 @@ public class HallController {
         hallServiceInterface.deleteHallByName(name);
     }
 
-    public void addHall(Hall hall){
-        hallServiceInterface.addHall(hall);
+
+
+    public void addHall(String name, int seatperrows, int rowsnumber){
+        hallServiceInterface.addHall(name, seatperrows, rowsnumber);
     }
 
     public int[] getFreeSeats(Hall hall){

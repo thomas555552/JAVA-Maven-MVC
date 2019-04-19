@@ -34,8 +34,10 @@ public class HallService implements HallServiceInterface {
         }
     }
 
+
     @Override
-    public void addHall(Hall hall) {
+    public void addHall(String name, int seatperrows, int rowsnumber)  {
+        Hall hall= new Hall(name, seatperrows,rowsnumber);
         halls.add(hall);
     }
 
@@ -67,7 +69,7 @@ public class HallService implements HallServiceInterface {
     @Override
     public void setUserToOneSeat(Hall hall, int seatNumber, User user) {
         int temp=halls.indexOf(hall);
-        halls.get(temp).getSeats().put(seatNumber, user);
+
   }
 
     @Override
@@ -82,7 +84,7 @@ public class HallService implements HallServiceInterface {
 
             int hallindextemp=halls.indexOf(hall);
             for (int seat: intSeats){
-                halls.get(hallindextemp).getSeats().put(seat,user);
+
             }
 
 

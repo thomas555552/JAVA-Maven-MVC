@@ -25,7 +25,8 @@ public class UserService implements UserServiceInterface {
     }
 
     @Override
-    public void add(User user) {
+    public void add(String name, String address, int age) {
+        User user= new User(name,address,age);
         users.add(user);
 
     }

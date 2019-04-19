@@ -22,8 +22,8 @@ public class UserController {
         return userServiceInterface.findByUsername(username);
    }
 
-   public void add(User user){
-        userServiceInterface.add(user);
+   public void add(String name, String address, int age){
+        userServiceInterface.add(name, address, age);
    }
 
 
