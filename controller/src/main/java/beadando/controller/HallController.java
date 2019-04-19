@@ -1,7 +1,6 @@
 package beadando.controller;
 
 import beadando.modell.Hall;
-import beadando.modell.User;
 import beadando.service.HallServiceInterface;
 
 import java.util.List;
@@ -19,29 +18,29 @@ public class HallController {
         return hallServiceInterface.getAllHall();
     }
 
-    public Hall getHallbyName(String name){
-        return hallServiceInterface.getHallbyName(name);
+    public Hall getHallbyID(int ID){
+        return hallServiceInterface.getHallbyID(ID);
     }
 
-    public void deleteHallByName(String name){
-        hallServiceInterface.deleteHallByName(name);
+    public void deleteHallByID(int ID){
+        hallServiceInterface.deleteHallByID(ID);
     }
 
 
 
-    public void addHall(String name, int seatperrows, int rowsnumber){
-        hallServiceInterface.addHall(name, seatperrows, rowsnumber);
+    public void addHall(int ID,String name, int seatperrows, int rowsnumber){
+        hallServiceInterface.addHall(ID,name, seatperrows, rowsnumber);
     }
 
     public int[] getFreeSeats(Hall hall){
         return hallServiceInterface.getFreeSeats(hall);
     }
 
-    public void setUserToOneSeat(Hall hall, int seatNumber, User user){
+    public void setUserToOneSeat(Hall hall, int seatNumber, String user){
         hallServiceInterface.setUserToOneSeat(hall,seatNumber,user);
     }
 
-    public void setUserToMoreSeat(Hall hall,String seatNumbers,User user){
+    public void setUserToMoreSeat(Hall hall,String seatNumbers,String user){
         hallServiceInterface.setUserToMoreSeat(hall,seatNumbers,user);
     }
 

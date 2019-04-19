@@ -16,5 +16,6 @@ public interface ProjectionServiceInterface {
 
     Projection getProjectionByID(int id);
 
+    //TODO getProjectionsByFilms - var egy film cimet es vissza kell adnia a hozza tartozo vetiteseket Listben
 
 }

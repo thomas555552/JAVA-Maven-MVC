@@ -1,29 +1,27 @@
 package beadando.modell;
 
 public class Seat {
-
-    private int SeatNumber;
-    private String UserName;
+    private int seatNumber;
+    private String userName;
 
     public Seat(int seatNumber, String userName) {
-        SeatNumber = seatNumber;
-        UserName = userName;
+        this.seatNumber = seatNumber;
+        this.userName = userName;
     }
 
-
     public int getSeatNumber() {
-        return SeatNumber;
+        return seatNumber;
     }
 
     public void setSeatNumber(int seatNumber) {
-        SeatNumber = seatNumber;
+        this.seatNumber = seatNumber;
     }
 
     public String getUserName() {
-        return UserName;
+        return userName;
     }
 
     public void setUserName(String userName) {
-        UserName = userName;
+        this.userName = userName;
     }
 }

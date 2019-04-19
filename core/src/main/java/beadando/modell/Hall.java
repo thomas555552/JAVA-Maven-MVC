@@ -1,34 +1,46 @@
 package beadando.modell;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
+
 
 
 public class Hall {
 
-
-    //TODO ID-t meg hozzaadni es javitani az egeszet az szerint
-    //TODO ha lesz ID akkor ha uj vetitest csinalunk es adunk hozza hallt, akkor uj hall kell, vagyis
-    //TODO annak a masolata amit megadtak,de uj ID-val, hogy a seatek uresek legyenek...
+    // ID  - vetitesnel eloszor letrehozni az uj Hallt es azt hozzaadni az uj projectionhoz
+    private int ID;
     private String name;
     private int seatperrows;
     private int rowsnumber;
-    /*private SortedMap<Integer, User> seats;*/
-    private List<Seat> seats;
+    private List<Seat> seats= new ArrayList<Seat>();
 
-    public Hall(String name, int seatperrows, int rowsnumber) {
+
+    public Hall(int ID, String name, int seatperrows, int rowsnumber) {
+        this.ID=ID;
         this.name = name;
         this.seatperrows = seatperrows;
         this.rowsnumber = rowsnumber;
 
-        //TODO exeption esetleg seatperrows nem lehet nagyobb mint 99 ++JAVITANI
+        //TODO exeption esetleg seatperrows nem lehet nagyobb mint 99
         for(int i=1;i<=rowsnumber;i++){
             for(int j=1;j<=seatperrows;j++){
                 int temp=(i*100)+j;
-
+                seats.add(new Seat(temp, "null"));
             }
         }
 
 
+
+    }
+
+
+    public int getID() {
+        return ID;
+    }
+
+    public void setID(int ID) {
+        this.ID = ID;
     }
 
     public List<Seat> getSeats() {

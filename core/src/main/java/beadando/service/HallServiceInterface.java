@@ -8,14 +8,14 @@ import java.util.List;
 public interface HallServiceInterface {
 
     List<Hall> getAllHall();
-    Hall getHallbyName(String name);
-    void deleteHallByName(String name);
+    Hall getHallbyID(int ID);
+    void deleteHallByID(int ID);
 
 
-    void addHall(String name, int seatperrows, int rowsnumber);
+    void addHall(int ID, String name, int seatperrows, int rowsnumber);
 
     int[] getFreeSeats(Hall hall);
-    void setUserToOneSeat(Hall hall,int seatNumber,User user);
-    void setUserToMoreSeat(Hall hall,String seatNumbers,User user);
+    void setUserToOneSeat(Hall hall,int seatNumber,String user);
+    void setUserToMoreSeat(Hall hall,String seatNumbers,String user);
 
 }
