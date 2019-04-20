@@ -33,4 +33,8 @@ public class ProjectionController {
     }
 
 
+    public  List<Projection> getProjectionsByFilm(String filmTitle){
+        return projectionServiceInterface.getProjectionsByFilm(filmTitle);
+    }
+
 }

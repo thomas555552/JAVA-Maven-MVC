@@ -34,6 +34,16 @@ public class ProjectionService implements ProjectionServiceInterface {
     }
 
     @Override
+    public List<Projection> getProjectionsByFilm(String filmTitle) {
+        List<Projection> ByTitleFilms = new ArrayList<Projection>();
+        for(Projection projection:projections) {
+            if(projection.getFilm().getTitle()==filmTitle)
+                ByTitleFilms.add(projection);
+        }
+        return ByTitleFilms;
+    }
+
+    @Override
     public Projection getProjectionByID(int id) {
         for(Projection projection:projections){
             int temp;
