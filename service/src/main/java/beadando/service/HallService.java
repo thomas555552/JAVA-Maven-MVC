@@ -4,6 +4,7 @@ import beadando.modell.Hall;
 import beadando.modell.Seat;
 import beadando.modell.User;
 
+import javax.management.openmbean.KeyAlreadyExistsException;
 import java.util.*;
 
 
@@ -80,7 +81,13 @@ public class HallService implements HallServiceInterface {
         int tempINDEX=0;
         if(rowsNUMB==1){ tempINDEX= seatNUMB-1; };
         if (rowsNUMB>1){ tempINDEX= ((rowsNUMB-1)*seatRowsNUMB)+seatNUMB-1 ; };
+        if(halls.get(temp).getSeats().get(tempINDEX).getUserName().equals("null")){
         halls.get(temp).getSeats().get(tempINDEX).setUserName(user);
+        }else try {
+            throw new KeyAlreadyExistsException();
+        } catch (KeyAlreadyExistsException e){
+            e.printStackTrace();
+        }
 
 
   }
