@@ -37,7 +37,8 @@ public class ProjectionService implements ProjectionServiceInterface {
     public List<Projection> getProjectionsByFilm(String filmTitle) {
         List<Projection> ByTitleFilms = new ArrayList<Projection>();
         for(Projection projection:projections) {
-            if(projection.getFilm().getTitle()==filmTitle)
+            if(projection.getFilm().getTitle().equals(filmTitle))
+
                 ByTitleFilms.add(projection);
         }
         return ByTitleFilms;
