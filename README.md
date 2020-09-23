@@ -1,4 +1,4 @@
 # JAVA-Maven-MVC
-JAVA Maven project
-MVC Example, Console application
+<b>JAVA Maven project<br>
+MVC Example, Console applicationbr<br></b>
 Text language: Hungarian
